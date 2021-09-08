@@ -14,13 +14,16 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PickUpAsap"
         android:usesCleartextTraffic="true">
-        <activity android:name=".Receipt_Fragment"
+
+        <activity android:name=".Login_Fragment"
             android:theme="@style/LaunchActivityTheme"></activity>
 
         <activity
+            android:name=".Receipt_Fragment"
+            android:theme="@style/LaunchActivityTheme" />
+        <activity
             android:name=".Home_Fragment"
             android:theme="@style/LaunchActivityTheme" />
-
         <activity
             android:name=".LaunchActivity"
             android:theme="@style/LaunchActivityTheme">
@@ -30,7 +33,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity
             android:name=".MainActivity"
             android:theme="@style/LaunchActivityTheme">
@@ -40,7 +42,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
     </application>
 
 </manifest>
