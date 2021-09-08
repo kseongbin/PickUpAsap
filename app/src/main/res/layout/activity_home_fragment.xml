@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="8dp"
+    tools:context=".Home_Fragment">
+
+
+    <GridLayout
+        android:id="@+id/gl"
+        android:layout_width="match_parent"
+        android:layout_height="280dp"
+        android:numColumns="4"
+        android:padding="8dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/civ01"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                app:civ_border_width="2dp"
+                app:civ_border_color="#D1D0D3"
+                app:civ_circle_background_color="#D1D0D3"
+                android:src="@drawable/ic_baseline_shopping_cart_24"
+                android:layout_marginLeft="16dp"
+                android:onClick="clickKor"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="한식"
+                android:textSize="12sp"
+                android:layout_marginLeft="36dp"/>
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                app:civ_border_width="2dp"
+                app:civ_border_color="#D1D0D3"
+                app:civ_circle_background_color="#D1D0D3"
+                android:src="@drawable/ic_baseline_shopping_cart_24"
+                android:layout_marginTop="16dp"
+                android:layout_marginLeft="16dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="치킨"
+                android:textSize="12sp"
+                android:layout_marginLeft="36dp"/>
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                app:civ_border_width="2dp"
+                app:civ_border_color="#D1D0D3"
+                app:civ_circle_background_color="#D1D0D3"
+                android:src="@drawable/ic_baseline_shopping_cart_24"
+                android:layout_marginTop="16dp"
+                android:layout_marginLeft="16dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="도시락"
+                android:textSize="12sp"
+                android:layout_marginLeft="30dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/civ02"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                app:civ_border_width="2dp"
+                app:civ_border_color="#D1D0D3"
+                app:civ_circle_background_color="#D1D0D3"
+                android:src="@drawable/ic_baseline_shopping_cart_24"
+                android:layout_marginLeft="32dp"
+                android:onClick="clickKor"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="중식"
+                android:textSize="12sp"
+                android:layout_marginLeft="52dp"/>
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                app:civ_border_width="2dp"
+                app:civ_border_color="#D1D0D3"
+                app:civ_circle_background_color="#D1D0D3"
+                android:src="@drawable/ic_baseline_shopping_cart_24"
+                android:layout_marginTop="16dp"
+                android:layout_marginLeft="32dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="피자"
+                android:textSize="12sp"
+                android:layout_marginLeft="52dp"/>
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                app:civ_border_width="2dp"
+                app:civ_border_color="#D1D0D3"
+                app:civ_circle_background_color="#D1D0D3"
+                android:src="@drawable/ic_baseline_shopping_cart_24"
+                android:layout_marginTop="16dp"
+                android:layout_marginLeft="32dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="분식"
+                android:textSize="12sp"
+                android:layout_marginLeft="52dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/civ03"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                app:civ_border_width="2dp"
+                app:civ_border_color="#D1D0D3"
+                app:civ_circle_background_color="#D1D0D3"
+                android:src="@drawable/ic_baseline_shopping_cart_24"
+                android:layout_marginLeft="32dp"
+                android:onClick="clickKor"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="일식"
+                android:textSize="12sp"
+                android:layout_marginLeft="52dp"/>
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                app:civ_border_width="2dp"
+                app:civ_border_color="#D1D0D3"
+                app:civ_circle_background_color="#D1D0D3"
+                android:src="@drawable/ic_baseline_shopping_cart_24"
+                android:layout_marginTop="16dp"
+                android:layout_marginLeft="32dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="패스트푸드"
+                android:textSize="12sp"
+                android:layout_marginLeft="36dp"/>
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                app:civ_border_width="2dp"
+                app:civ_border_color="#D1D0D3"
+                app:civ_circle_background_color="#D1D0D3"
+                android:src="@drawable/ic_baseline_shopping_cart_24"
+                android:layout_marginTop="16dp"
+                android:layout_marginLeft="32dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="아시안,양식"
+                android:textSize="12sp"
+                android:layout_marginLeft="35dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                app:civ_border_width="2dp"
+                app:civ_border_color="#D1D0D3"
+                app:civ_circle_background_color="#D1D0D3"
+                android:src="@drawable/ic_baseline_shopping_cart_24"
+                android:layout_marginLeft="32dp"
+                android:onClick="clickKor"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="디저트"
+                android:textSize="12sp"
+                android:layout_marginLeft="48dp"/>
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                app:civ_border_width="2dp"
+                app:civ_border_color="#D1D0D3"
+                app:civ_circle_background_color="#D1D0D3"
+                android:src="@drawable/ic_baseline_shopping_cart_24"
+                android:layout_marginTop="16dp"
+                android:layout_marginLeft="32dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="족발,보쌈"
+                android:textSize="12sp"
+                android:layout_marginLeft="39dp"/>
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                app:civ_border_width="2dp"
+                app:civ_border_color="#D1D0D3"
+                app:civ_circle_background_color="#D1D0D3"
+                android:src="@drawable/ic_baseline_shopping_cart_24"
+                android:layout_marginTop="16dp"
+                android:layout_marginLeft="32dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="기타"
+                android:textSize="12sp"
+                android:layout_marginLeft="52dp"/>
+
+        </LinearLayout>
+
+    </GridLayout>
+
+    <TextView
+        android:id="@+id/tv_update"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="새롭게 올라왔어요!"
+        android:layout_below="@id/gl"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="16dp"
+        android:textSize="16sp"
+        android:textColor="#FF333333"
+        android:textStyle="bold"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_update"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:orientation="horizontal"
+        android:layout_below="@id/tv_update"
+        android:layout_marginTop="8dp"
+        android:paddingLeft="16dp"/>
+
+    <TextView
+        android:id="@+id/tv_before"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="내가 전에 뭐 먹었더라?"
+        android:layout_below="@id/rv_update"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:textSize="16sp"
+        android:textColor="#FF333333"
+        android:textStyle="bold"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_before"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/tv_before"
+        android:orientation="vertical"
+        android:padding="16dp"/>
+
+</RelativeLayout>
