@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ShopInfoActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/iv"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:src="@drawable/paris"
+        android:scaleType="centerCrop"/>
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="식당이름 행당점"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="#FF333333"
+        android:layout_below="@id/iv"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="8dp"/>
+
+    <ImageView
+        android:id="@+id/iv_map"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_baseline_map_24"
+        android:layout_toRightOf="@id/tv_name"
+        android:layout_below="@id/iv"
+        android:layout_marginTop="12dp"
+        android:layout_marginLeft="12dp"
+        app:tint="#FF333333"/>
+
+    <ImageView
+        android:id="@+id/iv_fav"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_baseline_favorite_border_24"
+        android:layout_toRightOf="@id/iv_map"
+        android:layout_below="@id/iv"
+        android:layout_marginTop="12dp"
+        android:layout_marginLeft="12dp"
+        app:tint="#FF333333"/>
+
+    <RatingBar
+        android:id="@+id/ratingbar"
+        style="@style/Widget.AppCompat.RatingBar.Small"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_name"
+        android:layout_alignStart="@id/tv_name"
+        android:rating="3.5"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="3.2"
+        android:textColor="#FF333333"
+        android:gravity="center"
+        android:layout_toRightOf="@id/ratingbar"
+        android:layout_below="@id/tv_name"
+        android:layout_marginLeft="4dp"/>
+
+    <TextView
+        android:id="@+id/tv_tip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="배달팁"
+        android:textSize="14sp"
+        android:textColor="#FF333333"
+        android:layout_below="@id/ratingbar"
+        android:layout_alignStart="@id/ratingbar"
+        android:layout_marginTop="4dp"/>
+
+    <TextView
+        android:id="@+id/tv_tipprice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2000원 ~ 3500원"
+        android:textSize="14sp"
+        android:textColor="#FF333333"
+        android:layout_toRightOf="@id/tv_tip"
+        android:layout_below="@id/ratingbar"
+        android:layout_marginTop="2dp"
+        android:layout_marginLeft="80dp"/>
+
+    <TextView
+        android:id="@+id/tv_run"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="장사시간"
+        android:textSize="14sp"
+        android:textColor="#FF333333"
+        android:layout_below="@id/tv_tip"
+        android:layout_alignStart="@id/ratingbar"
+        android:layout_marginTop="4dp"/>
+
+    <TextView
+        android:id="@+id/tv_runtime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="오전 11:00 ~ 오후 9:00"
+        android:textSize="14sp"
+        android:textColor="#FF333333"
+        android:layout_toRightOf="@id/tv_tip"
+        android:layout_below="@id/tv_tipprice"
+        android:layout_marginTop="4dp"
+        android:layout_marginLeft="80dp"/>
+
+    <TextView
+        android:id="@+id/tv_deliver"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="배달시간"
+        android:textSize="14sp"
+        android:textColor="#FF333333"
+        android:layout_below="@id/tv_run"
+        android:layout_alignStart="@id/ratingbar"
+        android:layout_marginTop="4dp"/>
+
+    <TextView
+        android:id="@+id/tv_delivertime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="32 ~ 42분 후 도착"
+        android:textSize="14sp"
+        android:textColor="#FF333333"
+        android:layout_toRightOf="@id/tv_tip"
+        android:layout_below="@id/tv_runtime"
+        android:layout_marginTop="4dp"
+        android:layout_marginLeft="80dp"/>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="4dp"
+        android:background="#B7BABA"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="메뉴"
+        android:textSize="16sp"
+        android:textColor="#FF333333"
+        android:layout_margin="16dp"/>
+
+    <ListView
+        android:id="@+id/listview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>

@@ -14,10 +14,17 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PickUpAsap"
         android:usesCleartextTraffic="true">
-
-        <activity android:name=".Login_Fragment"
+        <activity android:name=".ShopInfoActivity"
             android:theme="@style/LaunchActivityTheme"></activity>
-
+        <activity
+            android:name=".ShopListActivity"
+            android:theme="@style/LaunchActivityTheme" />
+        <activity
+            android:name=".LoginAccountActivity"
+            android:theme="@style/LaunchActivityTheme" />
+        <activity
+            android:name=".Login_Fragment"
+            android:theme="@style/LaunchActivityTheme" />
         <activity
             android:name=".Receipt_Fragment"
             android:theme="@style/LaunchActivityTheme" />

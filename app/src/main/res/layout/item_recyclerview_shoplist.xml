@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="16dp"
+    android:elevation="4dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/iv_img"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:src="@drawable/paris"
+            android:scaleType="centerCrop"/>
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="음식점 이름"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="#FF333333"
+            android:layout_below="@id/iv_img"
+            android:padding="8dp"/>
+
+        <TextView
+            android:id="@+id/tv_msg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="장사시간 : 오전 11:00 ~ 오후 09:00"
+            android:layout_below="@+id/tv_name"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:paddingLeft="8dp"
+            android:paddingBottom="8dp"/>
+
+    </RelativeLayout>
+
+</com.google.android.material.card.MaterialCardView>
