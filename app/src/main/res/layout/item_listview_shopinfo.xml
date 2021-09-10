@@ -2,6 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:padding="16dp">
 
     <TextView
@@ -19,9 +20,46 @@
         android:layout_toRightOf="@id/tv_name"
         android:layout_marginLeft="8dp"
         android:text="(남은갯수 : 10개)"
-        android:textSize="16sp"
+        android:textSize="14sp"
         android:layout_alignBottom="@id/tv_name"
         android:textColor="#FF333333"/>
 
+    <TextView
+        android:id="@+id/tv_beforeprice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="20,000원  (1인분 기준)"
+        android:textColor="#FF333333"
+        android:layout_below="@id/tv_name"
+        android:layout_marginTop="4dp"/>
+
+    <TextView
+        android:id="@+id/tv_dc"
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        android:text="30% ↓"
+        android:layout_below="@id/tv_beforeprice"
+        android:gravity="center"
+        android:layout_marginTop="4dp"/>
+
+    <TextView
+        android:id="@+id/tv_afterprice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="14,000원  (1인분 기준)"
+        android:textColor="#FF333333"
+        android:layout_below="@id/tv_dc"
+        android:layout_marginTop="4dp"/>
+
+    <ImageView
+        android:id="@+id/iv"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="32dp"
+        android:src="@drawable/ic_baseline_local_pizza_24"
+        android:background="@drawable/roundshape_receipt"
+        android:layout_marginTop="4dp"
+        app:tint="@color/black" />
 
 </RelativeLayout>

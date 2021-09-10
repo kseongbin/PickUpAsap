@@ -14,8 +14,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PickUpAsap"
         android:usesCleartextTraffic="true">
-        <activity android:name=".ShopInfoActivity"
+        <activity android:name=".ShopMenuActivity"
             android:theme="@style/LaunchActivityTheme"></activity>
+        <activity
+            android:name=".ShopInfoActivity"
+            android:theme="@style/LaunchActivityTheme" />
         <activity
             android:name=".ShopListActivity"
             android:theme="@style/LaunchActivityTheme" />
