@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <item android:id="@+id/home"
+    <item android:id="@+id/bnv_home"
         android:title="홈"
         android:icon="@drawable/ic_bnv_home_24"/>
 
-    <item android:id="@+id/receipt"
+    <item android:id="@+id/bnv_receipt"
         android:title="주문내역"
         android:icon="@drawable/ic_bnv_receipt_24"/>
 
-    <item android:id="@+id/login"
+    <item android:id="@+id/bnv_login"
         android:title="로그인"
         android:icon="@drawable/ic_bnv_login_24"/>
 

@@ -31,7 +31,7 @@ public class LaunchActivity extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
-        handler.postDelayed(r, 3000);
+        handler.postDelayed(r, 2000);
     }
 
     @Override

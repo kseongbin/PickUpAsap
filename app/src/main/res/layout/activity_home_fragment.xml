@@ -29,8 +29,7 @@
                 app:civ_border_color="#D1D0D3"
                 app:civ_circle_background_color="#D1D0D3"
                 android:src="@drawable/ic_baseline_shopping_cart_24"
-                android:layout_marginLeft="16dp"
-                android:onClick="clickKor"/>
+                android:layout_marginLeft="16dp"/>
 
             <TextView
                 android:layout_width="wrap_content"
@@ -88,8 +87,7 @@
                 app:civ_border_color="#D1D0D3"
                 app:civ_circle_background_color="#D1D0D3"
                 android:src="@drawable/ic_baseline_shopping_cart_24"
-                android:layout_marginLeft="32dp"
-                android:onClick="clickKor"/>
+                android:layout_marginLeft="32dp"/>
 
             <TextView
                 android:layout_width="wrap_content"
@@ -147,8 +145,7 @@
                 app:civ_border_color="#D1D0D3"
                 app:civ_circle_background_color="#D1D0D3"
                 android:src="@drawable/ic_baseline_shopping_cart_24"
-                android:layout_marginLeft="32dp"
-                android:onClick="clickKor"/>
+                android:layout_marginLeft="32dp"/>
 
             <TextView
                 android:layout_width="wrap_content"
@@ -205,8 +202,7 @@
                 app:civ_border_color="#D1D0D3"
                 app:civ_circle_background_color="#D1D0D3"
                 android:src="@drawable/ic_baseline_shopping_cart_24"
-                android:layout_marginLeft="32dp"
-                android:onClick="clickKor"/>
+                android:layout_marginLeft="32dp"/>
 
             <TextView
                 android:layout_width="wrap_content"
