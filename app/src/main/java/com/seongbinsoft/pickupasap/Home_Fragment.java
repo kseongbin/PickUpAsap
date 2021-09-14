@@ -20,9 +20,9 @@ import de.hdodenhof.circleimageview.CircleImageView;
 
 public class Home_Fragment extends Fragment {
 
-    RecyclerView rv_Update;
+    RecyclerView rv_Update, rv_Before;
     ArrayList<ShopList_Item> items = new ArrayList<>();
-    HomeFragShopListAdapter horizontalAdapter;
+    HomeFragShopListAdapter adapter;
 
     @Nullable
     @Override
@@ -51,8 +51,12 @@ public class Home_Fragment extends Fragment {
             items.add(new ShopList_Item("하남돼지집", "장사시간 : 오전 09:00 ~ 오후 09:00", R.drawable.paris));
         }
         rv_Update = view.findViewById(R.id.rv_update);
-        horizontalAdapter = new HomeFragShopListAdapter(getActivity(), items);
-        rv_Update.setAdapter(horizontalAdapter);
+        adapter = new HomeFragShopListAdapter(getActivity(), items);
+        rv_Update.setAdapter(adapter);
+
+        //Vertical RecyclerView
+        rv_Before = view.findViewById(R.id.rv_before);
+        rv_Before.setAdapter(adapter);
 
 
     }

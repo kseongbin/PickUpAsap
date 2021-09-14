@@ -2,6 +2,7 @@ package com.seongbinsoft.pickupasap;
 
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -61,6 +62,13 @@ public class HomeFragShopListAdapter extends RecyclerView.Adapter {
             msg = itemView.findViewById(R.id.tv_msg);
             img = itemView.findViewById(R.id.iv_img);
 
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(context, ShopInfoActivity.class);
+                    context.startActivity(intent);
+                }
+            });
         }
     }
 

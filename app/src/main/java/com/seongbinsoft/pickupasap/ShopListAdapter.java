@@ -61,6 +61,13 @@ public class ShopListAdapter extends RecyclerView.Adapter {
             tvName = itemView.findViewById(R.id.tv_name);
             tvMsg = itemView.findViewById(R.id.tv_msg);
 
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(context, ShopInfoActivity.class);
+                    context.startActivity(intent);
+                }
+            });
         }
     }
 }

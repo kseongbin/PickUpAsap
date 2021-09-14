@@ -8,16 +8,34 @@
     tools:context=".ShopListActivity">
 
     <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar"
+        android:id="@+id/toolbar_shoplist"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#79797A"
-        app:titleTextColor="@color/white"/>
+        android:background="#B3B3B6"
+        app:titleTextColor="@color/white">
+
+        <RelativeLayout
+            android:layout_width="300dp"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="한식"
+                android:textColor="#FF333333"
+                android:textStyle="bold"
+                android:textSize="24sp"
+                android:layout_marginLeft="100dp"/>
+
+        </RelativeLayout>
+
+    </androidx.appcompat.widget.Toolbar>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerview"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         android:orientation="vertical"
         android:padding="16dp"/>
 
