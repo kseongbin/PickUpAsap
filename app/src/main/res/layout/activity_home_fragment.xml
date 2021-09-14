@@ -265,6 +265,7 @@
         android:id="@+id/rv_update"
         android:layout_width="match_parent"
         android:layout_height="150dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         android:orientation="horizontal"
         android:layout_below="@id/tv_update"
         android:layout_marginTop="8dp"
@@ -287,6 +288,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@id/tv_before"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         android:orientation="vertical"
         android:padding="16dp"/>
 
