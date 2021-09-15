@@ -164,7 +164,7 @@
         android:layout_margin="16dp"/>
 
     <ListView
-        android:id="@+id/listview"
+        android:id="@+id/menuinfo_listview"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 
