@@ -71,7 +71,7 @@
             android:layout_toRightOf="@id/btn_google"
             android:layout_below="@id/btn_naver"
             android:layout_marginTop="43dp"
-            android:background="#DCDBDF"/>
+            android:background="#EBEAED"/>
 
 
     </RelativeLayout>

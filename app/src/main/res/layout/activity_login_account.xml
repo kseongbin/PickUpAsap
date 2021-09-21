@@ -8,43 +8,33 @@
     tools:context=".LoginAccountActivity">
 
     <TextView
-        android:id="@+id/tv_email"
+        android:id="@+id/logaccount_nickname"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:layout_centerHorizontal="true"
-        android:text="이메일"
-        android:layout_marginTop="8dp"/>
-
-    <TextView
-        android:id="@+id/tv_nickname"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
         android:text="닉네임"
-        android:layout_below="@id/tv_email"
         android:textStyle="bold"
         android:textColor="#FF333333"
         android:textSize="20sp"
-        android:layout_marginTop="8dp"/>
+        android:layout_centerInParent="true"/>
 
     <de.hdodenhof.circleimageview.CircleImageView
-        android:id="@+id/civ"
+        android:id="@+id/logaccount_civ"
         android:layout_width="80dp"
         android:layout_height="80dp"
         android:src="@mipmap/ic_launcher"
-        android:layout_above="@id/tv_email"
         android:layout_centerHorizontal="true"
+        android:layout_above="@id/logaccount_nickname"
         android:layout_marginBottom="16dp"/>
 
     <Button
-        android:id="@+id/btn"
+        android:id="@+id/logagaccount_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Continue"
         android:layout_centerHorizontal="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginBottom="16dp"
-        android:backgroundTint="@color/teal_700"/>
+        android:layout_marginBottom="24dp"
+        android:backgroundTint="@color/teal_700"
+        android:onClick="ClickLogin"/>
 
 </RelativeLayout>
