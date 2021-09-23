@@ -30,9 +30,6 @@ import kotlin.jvm.functions.Function2;
 
 public class Login_Fragment extends Fragment {
 
-    CircleImageView civ;
-    TextView nickname;
-
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -46,9 +43,6 @@ public class Login_Fragment extends Fragment {
         //카카오톡 키 해쉬 얻어오기
         String keyHash= Utility.INSTANCE.getKeyHash(getContext());
         Log.i("KeyHash", keyHash);
-
-        civ = view.findViewById(R.id.logaccount_civ);
-        nickname = view.findViewById(R.id.logaccount_nickname);
 
         //카카오톡 로그인
         ImageView loginkakao = view.findViewById(R.id.btn_kakao);
@@ -69,7 +63,10 @@ public class Login_Fragment extends Fragment {
                                         G.login_nickname = user.getKakaoAccount().getProfile().getNickname();
                                         G.profileUrl = user.getKakaoAccount().getProfile().getProfileImageUrl();
 
-                                        Intent intent = new Intent();
+                                        Intent intent = new Intent(getContext(), LoginAccountActivity.class);
+                                        intent.putExtra("nickname", G.login_nickname);
+                                        intent.putExtra("profileUrl", G.profileUrl);
+                                        startActivity(intent);
                                     }
                                     return null;
                                 }

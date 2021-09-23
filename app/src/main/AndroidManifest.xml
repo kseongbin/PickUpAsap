@@ -5,7 +5,7 @@
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 
     <application
         android:name=".GlobalApplication"
@@ -16,8 +16,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PickUpAsap"
         android:usesCleartextTraffic="true">
-        <activity android:name=".ShopMenuActivity"
+        <activity android:name=".GoogleMapActivity"
             android:theme="@style/LaunchActivityTheme"></activity>
+        <activity
+            android:name=".ShopMenuActivity"
+            android:theme="@style/LaunchActivityTheme" />
         <activity
             android:name=".ShopInfoActivity"
             android:theme="@style/LaunchActivityTheme" />
@@ -57,14 +60,29 @@
         <activity android:name="com.kakao.sdk.auth.AuthCodeHandlerActivity">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
+
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
 
                 <!-- Redirect URI: "kakao{NATIVE_APP_KEY}://oauth" -->
-                <data android:host="oauth"
-                    android:scheme="1b0ee869d103812d18383c935416527e" />
+                <data
+                    android:host="oauth"
+                    android:scheme="kakao1b0ee869d103812d18383c935416527e"/>
             </intent-filter>
         </activity>
+
+        <!-- 1. 구글 지도 SDK 버전 번호 -->
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        <!-- HTTP 라이브러리 사용 -->
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+        <!-- ## API 키 등록 -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyDuYcOSHKVHrU56NEElHye9j2sAc6BV8aA" />
     </application>
 
 </manifest>

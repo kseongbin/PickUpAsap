@@ -3,6 +3,7 @@ package com.seongbinsoft.pickupasap;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
@@ -38,6 +39,11 @@ public class ShopInfoActivity extends AppCompatActivity {
     }
 
     public void clickMap(View view) {
+        Intent intent = new Intent(this, GoogleMapActivity.class);
+        startActivity(intent);
+    }
+
+    public void clickFav(View view) {
 
     }
 }
