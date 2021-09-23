@@ -36,4 +36,8 @@ public class ShopInfoActivity extends AppCompatActivity {
     public void clickBack(View view) {
         onBackPressed();
     }
+
+    public void clickMap(View view) {
+
+    }
 }
