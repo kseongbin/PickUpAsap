@@ -23,8 +23,7 @@ import com.kakao.sdk.auth.model.OAuthToken;
 import com.kakao.sdk.common.util.Utility;
 import com.kakao.sdk.user.UserApiClient;
 import com.kakao.sdk.user.model.User;
-import com.nhn.android.naverlogin.OAuthLogin;
-import com.nhn.android.naverlogin.OAuthLoginHandler;
+
 
 import org.jetbrains.annotations.NotNull;
 
