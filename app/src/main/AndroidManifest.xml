@@ -17,7 +17,7 @@
         android:theme="@style/Theme.PickUpAsap"
         android:usesCleartextTraffic="true">
         <activity android:name=".GoogleMapActivity"
-            android:theme="@style/LaunchActivityTheme"></activity>
+            android:theme="@style/LaunchActivityTheme"/>
         <activity
             android:name=".ShopMenuActivity"
             android:theme="@style/LaunchActivityTheme" />
@@ -29,15 +29,6 @@
             android:theme="@style/LaunchActivityTheme" />
         <activity
             android:name=".LoginAccountActivity"
-            android:theme="@style/LaunchActivityTheme" />
-        <activity
-            android:name=".Login_Fragment"
-            android:theme="@style/LaunchActivityTheme" />
-        <activity
-            android:name=".Receipt_Fragment"
-            android:theme="@style/LaunchActivityTheme" />
-        <activity
-            android:name=".Home_Fragment"
             android:theme="@style/LaunchActivityTheme" />
         <activity
             android:name=".LaunchActivity"

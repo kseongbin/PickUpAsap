@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">PickUpAsap</string>
+
+    <string name="naver_client_id">UH0PAjY5nxXpddXCOF8Y</string>
+    <string name="naver_client_secret">J0Gw2d5SIg</string>
+    <string name="naver_client_name">PickUpAsap</string>
+
 </resources>

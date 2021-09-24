@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -22,6 +23,8 @@ import com.kakao.sdk.auth.model.OAuthToken;
 import com.kakao.sdk.common.util.Utility;
 import com.kakao.sdk.user.UserApiClient;
 import com.kakao.sdk.user.model.User;
+import com.nhn.android.naverlogin.OAuthLogin;
+import com.nhn.android.naverlogin.OAuthLoginHandler;
 
 import org.jetbrains.annotations.NotNull;
 
@@ -80,6 +83,39 @@ public class Login_Fragment extends Fragment {
                 });
             }//kakaoOnClick method...
         });//kakaoOnClickListener method..
+
+//        //네이버 로그인
+//        ImageView loginNaver = view.findViewById(R.id.btn_naver);
+//        loginNaver.setOnClickListener(new View.OnClickListener() {
+//            OAuthLogin mOAuthLoginModule;
+//            @Override
+//            public void onClick(View v) {
+//                mOAuthLoginModule = OAuthLogin.getInstance();
+//                mOAuthLoginModule.init(getContext(), getString(R.string.naver_client_id), getString(R.string.naver_client_secret), getString(R.string.naver_client_name));
+//
+//                OAuthLoginHandler mOAuthLoginHandler = new OAuthLoginHandler() {
+//                    @Override
+//                    public void run(boolean success) {
+//                        if (success){
+//                            String accessToken = mOAuthLoginModule.getAccessToken(getContext());
+//                            String refreshToken = mOAuthLoginModule.getRefreshToken(getContext());
+//                            String tokenType = mOAuthLoginModule.getTokenType(getContext());
+//                            long expiresAt = mOAuthLoginModule.getExpiresAt(getContext());
+//
+//                            Log.i("LoginData", "accessToken: " + accessToken);
+//                            Log.i("LoginData", "refreshToken: " + refreshToken);
+//                            Log.i("LoginData", "expiresAt: " + expiresAt);
+//                            Log.i("LoginData", "tokenType: " + tokenType);
+//                        }else {
+//                            String errorCode = mOAuthLoginModule.getLastErrorCode(getContext()).getCode();
+//                            String errorDesc = mOAuthLoginModule.getLastErrorDesc(getContext());
+//                            Toast.makeText(getContext(), "errorCode: "+ errorCode + ", errorDesc: " + errorDesc, Toast.LENGTH_SHORT).show();
+//                        }
+//                    }
+//                };
+//                mOAuthLoginModule.startOauthLoginActivity(getActivity(), mOAuthLoginHandler);
+//            }//naverOnclick method...
+//        });//naverOnclickListener method..
 
     }//onViewCreated method...
 
