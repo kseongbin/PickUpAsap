@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1052214026844",
+    "project_id": "pickupasapseongbin",
+    "storage_bucket": "pickupasapseongbin.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1052214026844:android:2a6a88e8375fa9caa23c99",
+        "android_client_info": {
+          "package_name": "com.seongbinsoft.pickupasap"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1052214026844-jflau0mgquvophb9lo694iqfdr3feluo.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCttwZVNauPsKujysWD3i-NE7Rqy75Fudo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1052214026844-jflau0mgquvophb9lo694iqfdr3feluo.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

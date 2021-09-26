@@ -48,21 +48,25 @@ public class Home_Fragment extends Fragment {
         });
 
         //JsonArray 가져오기
-        RetrofitService retrofitService = RetrofitHelper.getRetrofitInstance().create(RetrofitService.class);
-        Call<ArrayList<RetrofitItem>> call = (Call)retrofitService.getShopArray();
-
-        call.enqueue(new Callback<ArrayList<RetrofitItem>>() {
-            @Override
-            public void onResponse(Call<ArrayList<RetrofitItem>> call, Response<ArrayList<RetrofitItem>> response) {
-                ArrayList<RetrofitItem> retrofititems = response.body();
-
-            }
-
-            @Override
-            public void onFailure(Call<ArrayList<RetrofitItem>> call, Throwable t) {
-                Toast.makeText(getContext(), "Fail: "+t.getMessage(), Toast.LENGTH_LONG).show();
-            }
-        });
+//        RetrofitService retrofitService = RetrofitHelper.getRetrofitInstance().create(RetrofitService.class);
+//        Call<ArrayList<RetrofitItem>> call = (Call)retrofitService.getShopArray();
+//
+//        call.enqueue(new Callback<ArrayList<RetrofitItem>>() {
+//            @Override
+//            public void onResponse(Call<ArrayList<RetrofitItem>> call, Response<ArrayList<RetrofitItem>> response) {
+//                ArrayList<RetrofitItem> retrofititems = response.body();
+//                StringBuffer buffer = new StringBuffer();
+//                for (RetrofitItem item : retrofititems){
+//                    buffer.append(item.name+","+item.msg+","+item.img+"\n");
+//                }
+//                items.add();
+//            }
+//
+//            @Override
+//            public void onFailure(Call<ArrayList<RetrofitItem>> call, Throwable t) {
+//                Toast.makeText(getContext(), "Fail: "+t.getMessage(), Toast.LENGTH_LONG).show();
+//            }
+//        });
 
         //Horizontal RecyclerView
         if (items!=null){
