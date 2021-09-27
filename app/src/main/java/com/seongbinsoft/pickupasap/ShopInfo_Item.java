@@ -6,12 +6,12 @@ public class ShopInfo_Item {
     String before;
     String dc;
     String after;
-    int iv;
+    String iv;
 
     public ShopInfo_Item() {
     }
 
-    public ShopInfo_Item(String name, String remain, String before, String dc, String after, int iv) {
+    public ShopInfo_Item(String name, String remain, String before, String dc, String after, String iv) {
         this.name = name;
         this.remain = remain;
         this.before = before;

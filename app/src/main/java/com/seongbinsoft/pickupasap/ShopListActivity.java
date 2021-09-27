@@ -6,11 +6,17 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Toast;
 
 
 import java.util.ArrayList;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 public class ShopListActivity extends AppCompatActivity {
 
@@ -35,6 +41,26 @@ public class ShopListActivity extends AppCompatActivity {
         recyclerView = findViewById(R.id.recyclerview);
         adapter = new ShopListAdapter(this, items);
         recyclerView.setAdapter(adapter);
+
+        RetrofitService retrofitService = RetrofitHelper.getRetrofitInstance().create(RetrofitService.class);
+        Call<ArrayList<ShopList_Item>> call = (Call)retrofitService.getShopArray();
+
+        call.enqueue(new Callback<ArrayList<ShopList_Item>>() {
+            @Override
+            public void onResponse(Call<ArrayList<ShopList_Item>> call, Response<ArrayList<ShopList_Item>> response) {
+                ArrayList<ShopList_Item> retrofititems = response.body();
+                if(items!=null){
+                    items.clear();
+                    adapter.notifyDataSetChanged();
+                    items.addAll(retrofititems);
+                }
+            }
+            @Override
+            public void onFailure(Call<ArrayList<ShopList_Item>> call, Throwable t) {
+                Toast.makeText(ShopListActivity.this, "Fail: "+t.getMessage(), Toast.LENGTH_LONG).show();
+                Log.i("TAG", t.getMessage());
+            }
+        });
     }
 
     @Override

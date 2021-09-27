@@ -8,4 +8,7 @@ import retrofit2.http.GET;
 public interface RetrofitService {
     @GET("/PickUpAsap/shopArray.json")
     Call<ArrayList<ShopList_Item>> getShopArray();
+
+    @GET("/PickUpAsap/menuArray.json")
+    Call<ArrayList<ShopInfo_Item>> getMenuArray();
 }

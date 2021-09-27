@@ -2,6 +2,7 @@ package com.seongbinsoft.pickupasap;
 
 import android.content.Context;
 import android.content.Intent;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -51,6 +52,7 @@ public class ShopInfoAdapter extends BaseAdapter {
         holder.after.setText(item.after);
         Glide.with(context).load(item.iv).into(holder.iv);
         //Picasso.get().load(item.iv).into(holder.iv);
+        Log.i("IV", item.iv);
 
         return convertView;
     }
@@ -74,7 +76,10 @@ public class ShopInfoAdapter extends BaseAdapter {
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
+                    //int position = LayoutPosition();
+                    //ShopInfo_Item item = items.get(position);
                     Intent intent = new Intent(context, ShopMenuActivity.class);
+                    //intent.putExtra("name", );
                     context.startActivity(intent);
                 }
             });
