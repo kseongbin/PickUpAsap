@@ -76,10 +76,7 @@ public class ShopInfoAdapter extends BaseAdapter {
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    //int position = LayoutPosition();
-                    //ShopInfo_Item item = items.get(position);
                     Intent intent = new Intent(context, ShopMenuActivity.class);
-                    //intent.putExtra("name", );
                     context.startActivity(intent);
                 }
             });
