@@ -8,6 +8,7 @@ import android.os.Build;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -77,7 +78,18 @@ public class ShopInfoActivity extends AppCompatActivity {
                 Toast.makeText(ShopInfoActivity.this, "Fail: "+t.getMessage(), Toast.LENGTH_LONG).show();
             }
         });
-    }
+
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                ShopInfo_Item item = items.get(position);
+                Intent intent = new Intent(ShopInfoActivity.this, ShopMenuActivity.class);
+                intent.putExtra("name", item.name);
+                intent.putExtra("img",item.iv);
+                startActivity(intent);
+            }
+        });
+    }//onCreate method...
 
     public void clickBack(View view) {
         onBackPressed();

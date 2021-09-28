@@ -73,13 +73,6 @@ public class ShopInfoAdapter extends BaseAdapter {
             after = itemView.findViewById(R.id.tv_afterprice);
             iv = itemView.findViewById(R.id.iv_menuinfo);
 
-            itemView.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    Intent intent = new Intent(context, ShopMenuActivity.class);
-                    context.startActivity(intent);
-                }
-            });
         }
     }
 }

@@ -61,7 +61,9 @@ public class ShopListActivity extends AppCompatActivity {
                 Log.i("TAG", t.getMessage());
             }
         });
-    }
+
+        
+    }//onCreate method..
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
