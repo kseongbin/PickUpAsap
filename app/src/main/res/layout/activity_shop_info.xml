@@ -12,7 +12,7 @@
         android:layout_height="wrap_content">
 
     <ImageView
-        android:id="@+id/iv"
+        android:id="@+id/shopmenu_iv"
         android:layout_width="match_parent"
         android:layout_height="200dp"
         android:src="@drawable/dakgalbi"
@@ -25,7 +25,7 @@
         android:textSize="24sp"
         android:textStyle="bold"
         android:textColor="#FF333333"
-        android:layout_below="@id/iv"
+        android:layout_below="@id/shopmenu_iv"
         android:layout_marginLeft="12dp"
         android:layout_marginTop="8dp"/>
 
@@ -35,7 +35,7 @@
         android:layout_height="wrap_content"
         android:src="@drawable/ic_baseline_map_24"
         android:layout_toRightOf="@id/tv_name"
-        android:layout_below="@id/iv"
+        android:layout_below="@id/shopmenu_iv"
         android:layout_marginTop="12dp"
         android:layout_marginLeft="12dp"
         app:tint="#FF333333"
@@ -47,7 +47,7 @@
         android:layout_height="wrap_content"
         android:src="@drawable/ic_baseline_favorite_border_24"
         android:layout_toRightOf="@id/iv_map"
-        android:layout_below="@id/iv"
+        android:layout_below="@id/shopmenu_iv"
         android:layout_marginTop="12dp"
         android:layout_marginLeft="12dp"
         app:tint="#FF333333"

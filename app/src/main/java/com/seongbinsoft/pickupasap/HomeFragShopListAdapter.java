@@ -1,8 +1,12 @@
 package com.seongbinsoft.pickupasap;
 
 
+import android.app.Activity;
+import android.app.ActivityOptions;
 import android.content.Context;
 import android.content.Intent;
+import android.os.Build;
+import android.util.Pair;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -65,8 +69,17 @@ public class HomeFragShopListAdapter extends RecyclerView.Adapter {
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
+                    int position = getLayoutPosition();
+                    ShopList_Item item = items.get(position);
                     Intent intent = new Intent(context, ShopInfoActivity.class);
-                    context.startActivity(intent);
+                    intent.putExtra("name", item.name);
+                    intent.putExtra("img", item.img);
+                    if (Build.VERSION.SDK_INT>= Build.VERSION_CODES.LOLLIPOP){
+                        ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation((Activity)context, new Pair<View, String>(img, "img"));
+                        context.startActivity(intent, options.toBundle());
+                    }else {
+                        context.startActivity(intent);
+                    }
                 }
             });
         }

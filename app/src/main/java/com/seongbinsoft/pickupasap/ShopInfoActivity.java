@@ -4,13 +4,16 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 
+import com.bumptech.glide.Glide;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.messaging.FirebaseMessaging;
@@ -29,11 +32,24 @@ public class ShopInfoActivity extends AppCompatActivity {
     ListView listView;
     ShopInfoAdapter adapter;
     boolean i = false;
+    ImageView iv_img;
+    TextView tv;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_shop_info);
+
+        iv_img = findViewById(R.id.shopmenu_iv);
+        tv = findViewById(R.id.tv_name);
+
+        Intent intent = getIntent();
+        String name = getIntent().getStringExtra("name");
+        String iv = getIntent().getStringExtra("img");
+        tv.setText(name);
+        Glide.with(ShopInfoActivity.this).load(iv).into(iv_img);
+        if(Build.VERSION.SDK_INT>=Build.VERSION_CODES.LOLLIPOP)
+            iv_img.setTransitionName("img");
 
 //        items.add(new ShopInfo_Item("곱창전골", "(남은갯수: 10개)", "20,000원", "30% ↓", "14,000원", R.drawable.newyork));
 //        items.add(new ShopInfo_Item("한우 사골", "(남은갯수: 10개)", "20,000원", "30% ↓", "14,000원", R.drawable.paris));
