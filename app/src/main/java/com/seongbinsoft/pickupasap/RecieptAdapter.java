@@ -74,13 +74,13 @@ public class RecieptAdapter extends BaseAdapter {
             status = itemView.findViewById(R.id.tv_progress);
             img = itemView.findViewById(R.id.iv_receipt);
 
-            itemView.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    Intent intent = new Intent(context, ShopInfoActivity.class);
-                    context.startActivity(intent);
-                }
-            });
+//            itemView.setOnClickListener(new View.OnClickListener() {
+//                @Override
+//                public void onClick(View v) {
+//                    Intent intent = new Intent(context, ShopInfoActivity.class);
+//                    context.startActivity(intent);
+//                }
+//            });
         }
     }
 

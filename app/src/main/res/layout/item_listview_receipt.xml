@@ -27,6 +27,7 @@
         android:layout_below="@id/tv_date"
         android:src="@drawable/ic_baseline_local_pizza_24"
         android:background="@drawable/roundshape_receipt"
+        android:scaleType="centerCrop"
         android:layout_marginTop="8dp"
         app:tint="@color/black" />
 

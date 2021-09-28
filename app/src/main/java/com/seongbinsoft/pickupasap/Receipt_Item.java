@@ -5,12 +5,12 @@ public class Receipt_Item {
     public String name;
     public String msg;
     public String status;
-    public int img;
+    public String img;
 
     public Receipt_Item() {
     }
 
-    public Receipt_Item(String date, String name, String msg, String status, int img) {
+    public Receipt_Item(String date, String name, String msg, String status, String img) {
         this.date = date;
         this.name = name;
         this.msg = msg;

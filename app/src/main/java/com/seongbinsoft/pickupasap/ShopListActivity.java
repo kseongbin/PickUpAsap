@@ -8,7 +8,6 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.MenuItem;
-import android.view.View;
 import android.widget.Toast;
 
 
@@ -22,7 +21,7 @@ public class ShopListActivity extends AppCompatActivity {
 
     ArrayList<ShopList_Item> items = new ArrayList<>();
     RecyclerView recyclerView;
-    ShopListAdapter adapter;
+    HomeFragAdapter adapter;
     Toolbar toolbar;
 
     @Override
@@ -39,7 +38,7 @@ public class ShopListActivity extends AppCompatActivity {
         //items.add(new ShopList_Item("홍콩반점", "장사시간 : 오전 10:00 ~ 오후 10:00", R.drawable.paris));
         //items.add(new ShopList_Item("하남돼지집", "장사시간 : 오전 09:00 ~ 오후 09:00", R.drawable.paris));
         recyclerView = findViewById(R.id.recyclerview);
-        adapter = new ShopListAdapter(this, items);
+        adapter = new HomeFragAdapter(this, items);
         recyclerView.setAdapter(adapter);
 
         RetrofitService retrofitService = RetrofitHelper.getRetrofitInstance().create(RetrofitService.class);
@@ -62,7 +61,7 @@ public class ShopListActivity extends AppCompatActivity {
             }
         });
 
-        
+
     }//onCreate method..
 
     @Override

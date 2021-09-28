@@ -11,4 +11,7 @@ public interface RetrofitService {
 
     @GET("/PickUpAsap/menuArray.json")
     Call<ArrayList<ShopInfo_Item>> getMenuArray();
+
+    @GET("/PickUpAsap/shopReceipt.json")
+    Call<ArrayList<Receipt_Item>> getReceiptArray();
 }

@@ -19,11 +19,11 @@ import com.bumptech.glide.Glide;
 
 import java.util.ArrayList;
 
-public class ShopListAdapter extends RecyclerView.Adapter {
+public class HomeFragAdapter extends RecyclerView.Adapter {
     Context context;
     ArrayList<ShopList_Item> items;
 
-    public ShopListAdapter(Context context, ArrayList<ShopList_Item> items) {
+    public HomeFragAdapter(Context context, ArrayList<ShopList_Item> items) {
         this.context = context;
         this.items = items;
     }
