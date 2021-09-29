@@ -38,41 +38,24 @@ public class ShopInfoAdapter extends BaseAdapter {
     public View getView(int position, View convertView, ViewGroup parent) {
         if( convertView == null ){
             LayoutInflater inflater = LayoutInflater.from(context);
-            convertView = inflater.inflate(R.layout.item_listview_shopinfo, parent, false);
-            ViewHolder holder = new ViewHolder(convertView);
-            convertView.setTag(holder);
+            convertView = inflater.inflate(R.layout.item_listview_shopinfo, null);
         }
+
+        TextView name = convertView.findViewById(R.id.tv_menuname);
+        TextView remain = convertView.findViewById(R.id.tv_remain);
+        TextView before = convertView.findViewById(R.id.tv_beforeprice);
+        TextView dc = convertView.findViewById(R.id.tv_dc);
+        TextView after = convertView.findViewById(R.id.tv_afterprice);
+        ImageView iv = convertView.findViewById(R.id.iv_menuinfo);
 
         ShopInfo_Item item = items.get(position);
-        ViewHolder holder = (ViewHolder) convertView.getTag();
-        holder.name.setText(item.name);
-        holder.remain.setText(item.remain);
-        holder.before.setText(item.before);
-        holder.dc.setText(item.dc);
-        holder.after.setText(item.after);
-        Glide.with(context).load(item.iv).into(holder.iv);
-        //Picasso.get().load(item.iv).into(holder.iv);
-        Log.i("IV", item.iv);
+        name.setText(item.name);
+        remain.setText(item.remain);
+        before.setText(item.before);
+        dc.setText(item.dc);
+        after.setText(item.after);
+        Glide.with(context).load(item.iv).into(iv);
 
         return convertView;
-    }
-
-    class ViewHolder{
-        TextView name;
-        TextView remain;
-        TextView before;
-        TextView dc;
-        TextView after;
-        ImageView iv;
-
-        public ViewHolder(View itemView){
-            name = itemView.findViewById(R.id.tv_menuname);
-            remain = itemView.findViewById(R.id.tv_remain);
-            before = itemView.findViewById(R.id.tv_beforeprice);
-            dc = itemView.findViewById(R.id.tv_dc);
-            after = itemView.findViewById(R.id.tv_afterprice);
-            iv = itemView.findViewById(R.id.iv_menuinfo);
-
-        }
     }
 }

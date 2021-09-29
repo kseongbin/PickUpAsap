@@ -43,45 +43,21 @@ public class RecieptAdapter extends BaseAdapter {
 
         if( convertView == null ){
             LayoutInflater inflater = LayoutInflater.from(context);
-            convertView = inflater.inflate(R.layout.item_listview_receipt, parent, false);
-            ViewHolder holder = new ViewHolder(convertView);
-            convertView.setTag(holder);
+            convertView = inflater.inflate(R.layout.item_listview_receipt, null);
         }
+        TextView date = convertView.findViewById(R.id.tv_date);
+        TextView name = convertView.findViewById(R.id.tv_name);
+        TextView msg = convertView.findViewById(R.id.tv_menu);
+        TextView status = convertView.findViewById(R.id.tv_progress);
+        ImageView iv = convertView.findViewById(R.id.iv_receipt);
 
         Receipt_Item item = items.get(position);
-        ViewHolder holder = (ViewHolder) convertView.getTag();
-        if (holder.date!=null){holder.date.setText(item.date);}
-        if (holder.status!=null){holder.status.setText(item.status);}
-        if (holder.name!=null){holder.name.setText(item.name);}
-        if (holder.msg!=null){holder.msg.setText(item.msg);}
-        Glide.with(context).load(item.img).into(holder.img);
+        date.setText(item.date);
+        name.setText(item.name);
+        msg.setText(item.msg);
+        status.setText(item.status);
+        Glide.with(context).load(item.img).into(iv);
 
         return convertView;
     }
-
-    class ViewHolder{
-        TextView date;
-        TextView name;
-        TextView msg;
-        TextView status;
-        ImageView img;
-
-        public ViewHolder(View itemView){
-
-            date = itemView.findViewById(R.id.tv_date);
-            name = itemView.findViewById(R.id.tv_name);
-            msg = itemView.findViewById(R.id.tv_menu);
-            status = itemView.findViewById(R.id.tv_progress);
-            img = itemView.findViewById(R.id.iv_receipt);
-
-//            itemView.setOnClickListener(new View.OnClickListener() {
-//                @Override
-//                public void onClick(View v) {
-//                    Intent intent = new Intent(context, ShopInfoActivity.class);
-//                    context.startActivity(intent);
-//                }
-//            });
-        }
-    }
-
 }
