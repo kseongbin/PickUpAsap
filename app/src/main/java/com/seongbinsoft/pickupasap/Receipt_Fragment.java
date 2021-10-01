@@ -14,6 +14,14 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.MobileAds;
+import com.google.android.gms.ads.initialization.InitializationStatus;
+import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
+
+import org.jetbrains.annotations.NotNull;
+
 import java.util.ArrayList;
 
 import retrofit2.Call;
@@ -25,6 +33,7 @@ public class Receipt_Fragment extends Fragment {
     ListView listView;
     RecieptAdapter adapter;
     ArrayList<Receipt_Item> items = new ArrayList<>();
+    AdView adView;
 
     @Nullable
     @Override
@@ -35,6 +44,16 @@ public class Receipt_Fragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+
+        MobileAds.initialize(getContext(), new OnInitializationCompleteListener() {
+            @Override
+            public void onInitializationComplete(@NonNull @NotNull InitializationStatus initializationStatus) {
+                //Toast.makeText(getContext(), "이니셜 완료!", Toast.LENGTH_SHORT).show();
+            }
+        });
+        adView = view.findViewById(R.id.adv);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        adView.loadAd(adRequest);
 
         //items.add(new Receipt_Item("09/02(목)", "하남돼지집 행당점", "삼겹살 구이(2인분) - 25,000원(30% ↓)", "배달 완료", R.drawable.newyork));
         //items.add(new Receipt_Item("09/03(금)", "홍콩반점 행당점", "짜장면(2인분) - 15,000원(30% ↓)", "접수 완료", R.drawable.newyork));

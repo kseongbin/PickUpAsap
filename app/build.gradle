@@ -44,9 +44,11 @@ dependencies {
     implementation 'com.squareup.retrofit2:retrofit:2.9.0'
     implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
     implementation 'com.squareup.retrofit2:converter-scalars:2.9.0'
+    implementation 'com.google.android.gms:play-services-ads:20.3.0'    //Google Admob
 
     implementation platform('com.google.firebase:firebase-bom:28.4.1')  //Firebase core platform library
-    implementation 'com.google.firebase:firebase-messaging'             //Firebase Cloud messaging SDK Library
+    implementation 'com.google.firebase:firebase-messaging'
+    //Firebase Cloud messaging SDK Library
 
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'

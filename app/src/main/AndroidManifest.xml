@@ -77,6 +77,10 @@
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyDuYcOSHKVHrU56NEElHye9j2sAc6BV8aA" />
+        <!-- Sample AdMob App ID: ca-app-pub-3940256099942544~3347511713 -->
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-5295714562603814~8549409094"/>
     </application>
 
 </manifest>

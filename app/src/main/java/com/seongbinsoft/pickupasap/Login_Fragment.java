@@ -18,7 +18,11 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.bumptech.glide.Glide;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.MobileAds;
+import com.google.android.gms.ads.initialization.InitializationStatus;
+import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
 import com.kakao.sdk.auth.model.OAuthToken;
 import com.kakao.sdk.common.util.Utility;
 import com.kakao.sdk.user.UserApiClient;
@@ -33,6 +37,8 @@ import kotlin.jvm.functions.Function2;
 
 public class Login_Fragment extends Fragment {
 
+    AdView adView;
+
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -42,6 +48,17 @@ public class Login_Fragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull @NotNull View view, @Nullable @org.jetbrains.annotations.Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+
+        //Google Admob 배너광고
+        MobileAds.initialize(getContext(), new OnInitializationCompleteListener() {
+            @Override
+            public void onInitializationComplete(@NonNull @NotNull InitializationStatus initializationStatus) {
+                //Toast.makeText(getContext(), "이니셜 완료!", Toast.LENGTH_SHORT).show();
+            }
+        });
+        adView = view.findViewById(R.id.adv);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        adView.loadAd(adRequest);
 
         //카카오톡 키 해쉬 얻어오기
         String keyHash= Utility.INSTANCE.getKeyHash(getContext());
@@ -82,6 +99,30 @@ public class Login_Fragment extends Fragment {
                 });
             }//kakaoOnClick method...
         });//kakaoOnClickListener method..
+
+//        SignInButton googleBtn = view.findViewById(R.id.btn_google);
+//        final int RC_SIGN_IN = 1;
+//        GoogleSignInClient googleSignInClient;
+//        FirebaseAuth firebaseAuth = FirebaseAuth.getInstance();
+//        googleLoginHelper();
+//        googleBtn.setOnClickListener(this::googleClick);
+//
+//        public void googleLoginHelper(){
+//            GoogleSignInOptions googleSignInOptions = new GoogleSignInOptions
+//                    .Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
+//                    .requestIdToken(getString(R.string.default_web_client_id))
+//                    .requestEmail()
+//                    .build();
+//
+//            googleSignInClient = GoogleSignIn.getClient(this,googleSignInOptions);
+//        }
+//
+//        public void googleClick(View view) {
+//            Intent signInIntent = googleSignInClient.getSignInIntent();
+//            startActivityForResult(signInIntent,RC_SIGN_IN);
+//        }
+
+
 
 //        //네이버 로그인
 //        ImageView loginNaver = view.findViewById(R.id.btn_naver);
