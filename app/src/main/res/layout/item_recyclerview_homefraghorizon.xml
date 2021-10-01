@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="250dp"
+    android:layout_height="140dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="16dp"
+    android:elevation="8dp">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#DDFAF9">
+
+        <ImageView
+            android:id="@+id/iv_horiimg"
+            android:layout_width="135dp"
+            android:layout_height="140dp"
+            android:src="@drawable/dakgalbi"
+            android:layout_alignParentRight="true"
+            android:scaleType="centerCrop"/>
+
+        <TextView
+            android:id="@+id/tv_shopnamehori"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="춘천닭갈비"
+            android:textSize="18sp"
+            android:textColor="#FF333333"
+            android:textStyle="bold"
+            android:layout_marginTop="16dp"
+            android:layout_marginLeft="8dp"/>
+
+        <TextView
+            android:id="@+id/tv_shopmenuhori"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="춘천닭갈비"
+            android:textColor="#FF333333"
+            android:textStyle="bold"
+            android:layout_below="@id/tv_shopnamehori"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"/>
+
+        <TextView
+            android:id="@+id/tv_one"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="(1인분 기준)"
+            android:textSize="10sp"
+            android:textColor="#FF333333"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="4dp"
+            android:layout_below="@id/tv_shopmenuhori"/>
+
+        <TextView
+            android:id="@+id/tv_realprice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2만원 →"
+            android:textSize="10sp"
+            android:textColor="#FF333333"
+            android:layout_below="@id/tv_one"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="4dp"/>
+
+        <TextView
+            android:id="@+id/dc_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1만 4000원 (30%↓)"
+            android:textSize="10sp"
+            android:textColor="#FF333333"
+            android:layout_below="@id/tv_realprice"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="4dp"/>
+
+    </RelativeLayout>
+
+</com.google.android.material.card.MaterialCardView>

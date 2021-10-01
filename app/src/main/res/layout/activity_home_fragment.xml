@@ -268,7 +268,7 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_update"
         android:layout_width="match_parent"
-        android:layout_height="290dp"
+        android:layout_height="150dp"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         android:orientation="horizontal"
         android:layout_below="@id/tv_update"
