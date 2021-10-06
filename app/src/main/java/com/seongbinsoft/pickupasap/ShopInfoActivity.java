@@ -103,18 +103,18 @@ public class ShopInfoActivity extends AppCompatActivity {
     public void clickFav(View view) {
         ImageView fav = findViewById(R.id.iv_fav);
         if (i == false){
+            fav.setImageResource(R.drawable.ic_baseline_favorite_24);
+            i = true;
             FirebaseMessaging.getInstance().subscribeToTopic("haengdang").addOnCompleteListener(new OnCompleteListener<Void>() {
                 @Override
                 public void onComplete(@NonNull @NotNull Task<Void> task) {
-                    fav.setImageResource(R.drawable.ic_baseline_favorite_24);
-                    i = true;
                     Toast.makeText(ShopInfoActivity.this, "음식점의 업데이트를 알림으로 받습니다.", Toast.LENGTH_SHORT).show();
-                }
-            });
+                }//onComplete method...
+            });//FirebaseMessaging method..
         }else {
             fav.setImageResource(R.drawable.ic_baseline_favorite_border_24);
             i = false;
             Toast.makeText(this, "음식점의 업데이트 알림을 종료합니다.", Toast.LENGTH_SHORT).show();
         }
-    }
+    }//clickFav method..
 }

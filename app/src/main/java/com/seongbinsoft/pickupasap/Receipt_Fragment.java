@@ -64,7 +64,7 @@ public class Receipt_Fragment extends Fragment {
         listView.setAdapter(adapter);
 
         RetrofitService retrofitService = RetrofitHelper.getRetrofitInstance().create(RetrofitService.class);
-        Call<ArrayList<Receipt_Item>> call = (Call)retrofitService.getReceiptArray();
+        Call<ArrayList<Receipt_Item>> call = retrofitService.getReceiptArray();
         call.enqueue(new Callback<ArrayList<Receipt_Item>>() {
             @Override
             public void onResponse(Call<ArrayList<Receipt_Item>> call, Response<ArrayList<Receipt_Item>> response) {

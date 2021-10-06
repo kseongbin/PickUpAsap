@@ -38,7 +38,7 @@ public class ShopInfoAdapter extends BaseAdapter {
     public View getView(int position, View convertView, ViewGroup parent) {
         if( convertView == null ){
             LayoutInflater inflater = LayoutInflater.from(context);
-            convertView = inflater.inflate(R.layout.item_listview_shopinfo, null);
+            convertView = inflater.inflate(R.layout.item_listview_shopinfo, parent, false);
         }
 
         TextView name = convertView.findViewById(R.id.tv_menuname);
@@ -55,6 +55,7 @@ public class ShopInfoAdapter extends BaseAdapter {
         dc.setText(item.dc);
         after.setText(item.after);
         Glide.with(context).load(item.iv).into(iv);
+        //Log.i("URL", item.iv);
 
         return convertView;
     }

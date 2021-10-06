@@ -10,7 +10,7 @@
     <RelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="#DDFAF9">
+        android:background="#F8F1F1">
 
         <ImageView
             android:id="@+id/iv_horiimg"

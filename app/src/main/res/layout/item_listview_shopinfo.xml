@@ -66,7 +66,6 @@
         android:src="@drawable/ic_baseline_local_pizza_24"
         android:background="@drawable/roundshape_receipt"
         android:scaleType="centerCrop"
-        android:layout_marginTop="4dp"
-        app:tint="@color/black" />
+        android:layout_marginTop="4dp"/>
 
 </RelativeLayout>
