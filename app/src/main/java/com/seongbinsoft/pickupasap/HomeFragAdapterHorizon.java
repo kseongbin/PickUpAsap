@@ -16,6 +16,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
+import com.google.gson.Gson;
 
 import org.jetbrains.annotations.NotNull;
 
@@ -85,6 +86,10 @@ public class HomeFragAdapterHorizon extends RecyclerView.Adapter {
                     Intent intent = new Intent(context, ShopInfoActivity.class);
                     intent.putExtra("name", item.horiname);
                     intent.putExtra("img", item.horiimg);
+
+                    Gson gson = new Gson();
+                    gson.toJson(item.menu);
+                    intent.putExtra("menu", item.menu);
                     if (Build.VERSION.SDK_INT>= Build.VERSION_CODES.LOLLIPOP){
                         ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation((Activity)context, new Pair<View, String>(horiiv, "img"));
                         context.startActivity(intent, options.toBundle());
