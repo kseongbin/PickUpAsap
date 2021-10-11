@@ -90,6 +90,7 @@ public class HomeFragAdapterHorizon extends RecyclerView.Adapter {
                     Gson gson = new Gson();
                     gson.toJson(item.menu);
                     intent.putExtra("menu", item.menu);
+
                     if (Build.VERSION.SDK_INT>= Build.VERSION_CODES.LOLLIPOP){
                         ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation((Activity)context, new Pair<View, String>(horiiv, "img"));
                         context.startActivity(intent, options.toBundle());

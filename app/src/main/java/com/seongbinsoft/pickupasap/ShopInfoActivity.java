@@ -30,15 +30,47 @@ import retrofit2.Response;
 public class ShopInfoActivity extends AppCompatActivity {
 
     ListView listView;
+    ArrayList<MenuList_Item> items = new ArrayList<>();
+    ShopInfoAdapter adapter;
     boolean i = false;
+    ImageView iv;
+    TextView tv;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_shop_info);
 
+        //items.add(new MenuList_Item("메뉴이름","(12개)","1000원","30%","700원","http://kim940840.dothome.co.kr/PickUpAsap/steak.jpg"));
+
+        iv = findViewById(R.id.shopmenu_iv);
+        tv = findViewById(R.id.tv_name);
+
+        Intent intent = getIntent();
+        String name = intent.getStringExtra("name");
+        String img = intent.getStringExtra("img");
+        String menu = intent.getStringExtra("menu");
+        tv.setText(name);
+        Glide.with(this).load(img).into(iv);
+
+        listView = findViewById(R.id.menuinfo_listview);
+        adapter = new ShopInfoAdapter(this, items);
+        listView.setAdapter(adapter);
+
+
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                MenuList_Item item = items.get(position);
+                Intent intent1 = new Intent(ShopInfoActivity.this, ShopMenuActivity.class);
+                intent1.putExtra("name", item.menuName);
+                intent1.putExtra("img", item.iv);
+                startActivity(intent1);
+            }
+        });
 
     }//onCreate method...
+
 
     public void clickBack(View view) {
         onBackPressed();
