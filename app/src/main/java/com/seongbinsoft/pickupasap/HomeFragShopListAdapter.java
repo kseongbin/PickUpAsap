@@ -17,6 +17,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
+import com.google.gson.Gson;
 
 import java.util.ArrayList;
 
@@ -74,6 +75,9 @@ public class HomeFragShopListAdapter extends RecyclerView.Adapter {
                     Intent intent = new Intent(context, ShopInfoActivity.class);
                     intent.putExtra("name", item.name);
                     intent.putExtra("img", item.img);
+                    Gson gson = new Gson();
+                    String menujson = gson.toJson(item.menu);
+                    intent.putExtra("menu", menujson);
                     if (Build.VERSION.SDK_INT>= Build.VERSION_CODES.LOLLIPOP){
                         ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation((Activity)context, new Pair<View, String>(img, "img"));
                         context.startActivity(intent, options.toBundle());

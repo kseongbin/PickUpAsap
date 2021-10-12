@@ -19,6 +19,7 @@ import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.MobileAds;
 import com.google.android.gms.ads.initialization.InitializationStatus;
 import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
+import com.google.gson.Gson;
 
 import org.jetbrains.annotations.NotNull;
 
@@ -88,6 +89,9 @@ public class Receipt_Fragment extends Fragment {
                 Intent intent = new Intent(getContext(), ShopInfoActivity.class);
                 intent.putExtra("name", item.name);
                 intent.putExtra("img", item.img);
+                Gson gson = new Gson();
+                String menujson = gson.toJson(item.menu);
+                intent.putExtra("menu", menujson);
                 startActivity(intent);
             }
         });
