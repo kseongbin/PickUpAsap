@@ -18,10 +18,12 @@ import com.bumptech.glide.Glide;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.messaging.FirebaseMessaging;
+import com.google.gson.Gson;
 
 import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -30,7 +32,7 @@ import retrofit2.Response;
 public class ShopInfoActivity extends AppCompatActivity {
 
     ListView listView;
-    ArrayList<MenuList_Item> items = new ArrayList<>();
+    ArrayList<MenuList_Item> items;
     ShopInfoAdapter adapter;
     boolean i = false;
     ImageView iv;
@@ -49,13 +51,25 @@ public class ShopInfoActivity extends AppCompatActivity {
         Intent intent = getIntent();
         String name = intent.getStringExtra("name");
         String img = intent.getStringExtra("img");
+
         String menu = intent.getStringExtra("menu");
+//        Toast.makeText(this, ""+menu, Toast.LENGTH_LONG).show();
+        Gson gson = new Gson();
+        MenuList_Item[] arr = gson.fromJson(menu, MenuList_Item[].class);
+        items = new ArrayList<MenuList_Item>(Arrays.asList(arr));
+//        Toast.makeText(this, ""+items.size(), Toast.LENGTH_SHORT).show();
+
+
         tv.setText(name);
         Glide.with(this).load(img).into(iv);
 
         listView = findViewById(R.id.menuinfo_listview);
         adapter = new ShopInfoAdapter(this, items);
         listView.setAdapter(adapter);
+
+        //화면 전환효과(Animation)
+        if(Build.VERSION.SDK_INT>=Build.VERSION_CODES.LOLLIPOP)
+            iv.setTransitionName("img");
 
 
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {

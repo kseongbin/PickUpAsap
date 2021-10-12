@@ -11,6 +11,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -88,8 +89,8 @@ public class HomeFragAdapterHorizon extends RecyclerView.Adapter {
                     intent.putExtra("img", item.horiimg);
 
                     Gson gson = new Gson();
-                    gson.toJson(item.menu);
-                    intent.putExtra("menu", item.menu);
+                    String menujson = gson.toJson(item.menu);
+                    intent.putExtra("menu", menujson);
 
                     if (Build.VERSION.SDK_INT>= Build.VERSION_CODES.LOLLIPOP){
                         ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation((Activity)context, new Pair<View, String>(horiiv, "img"));

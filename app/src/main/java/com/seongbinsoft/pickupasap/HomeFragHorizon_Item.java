@@ -9,7 +9,7 @@ public class HomeFragHorizon_Item {
     public String one;
     public String horireal;
     public String horidc;
-    ArrayList<MenuList_Item> menu;
+    public ArrayList<MenuList_Item> menu;
 
     public HomeFragHorizon_Item() {
     }
