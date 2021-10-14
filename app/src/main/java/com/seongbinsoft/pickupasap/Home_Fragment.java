@@ -5,6 +5,7 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.RecyclerView;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import android.content.Context;
 import android.content.Intent;
@@ -30,6 +31,7 @@ public class Home_Fragment extends Fragment {
     ArrayList<HomeFragHorizon_Item> hori_items = new ArrayList<>();
     HomeFragShopListAdapter adapter;
     HomeFragAdapterHorizon horizon_adapter;
+    SwipeRefreshLayout mySwipeRefreshLayout;
 
     @Nullable
     @Override
@@ -58,10 +60,31 @@ public class Home_Fragment extends Fragment {
 //            hori_items.add(new HomeFragHorizon_Item(R.drawable.paris, "식당이름", "메뉴이름", "2만원 →", "1만4000원(30%↓)"));
 //            Toast.makeText(getContext(), ""+hori_items.size(), Toast.LENGTH_SHORT).show();
 //        }
-            rv_Update = view.findViewById(R.id.rv_update);
-            horizon_adapter = new HomeFragAdapterHorizon(getActivity(), hori_items);
-            rv_Update.setAdapter(horizon_adapter);
 
+        load();
+        rv_Update = view.findViewById(R.id.rv_update);
+        horizon_adapter = new HomeFragAdapterHorizon(getActivity(), hori_items);
+        rv_Update.setAdapter(horizon_adapter);
+
+
+        //Vertical RecyclerView
+        load2();
+        rv_Before = view.findViewById(R.id.rv_before);
+        adapter = new HomeFragShopListAdapter(getActivity(), items);
+        rv_Before.setAdapter(adapter);
+
+//        mySwipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+//            @Override
+//            public void onRefresh() {
+//                load();
+//                load2();
+//                mySwipeRefreshLayout.setRefreshing(false);
+//            }
+//        });
+
+    }//OnViewCreated method...
+
+    public void load(){
         RetrofitService retrofitServicehori = RetrofitHelper.getRetrofitInstance().create(RetrofitService.class);
         Call<ArrayList<HomeFragHorizon_Item>> callhori = retrofitServicehori.gethoriArray();
         callhori.enqueue(new Callback<ArrayList<HomeFragHorizon_Item>>() {
@@ -79,14 +102,9 @@ public class Home_Fragment extends Fragment {
                 Toast.makeText(getContext(), "Fail: "+t.getMessage(), Toast.LENGTH_LONG).show();
             }
         });
+    }
 
-
-        //Vertical RecyclerView
-        rv_Before = view.findViewById(R.id.rv_before);
-        adapter = new HomeFragShopListAdapter(getActivity(), items);
-        rv_Before.setAdapter(adapter);
-
-        //JsonArray 가져오기
+    public void load2(){
         RetrofitService retrofitService = RetrofitHelper.getRetrofitInstance().create(RetrofitService.class);
         Call<ArrayList<ShopList_Item>> call = retrofitService.getShopArray();
 
@@ -106,6 +124,5 @@ public class Home_Fragment extends Fragment {
                 Log.i("TAG", t.getMessage());
             }
         });
-
-    }//OnViewCreated method...
+    }
 }//Home_Fragment...
