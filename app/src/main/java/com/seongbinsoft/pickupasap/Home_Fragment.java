@@ -60,7 +60,6 @@ public class Home_Fragment extends Fragment {
 //            hori_items.add(new HomeFragHorizon_Item(R.drawable.paris, "식당이름", "메뉴이름", "2만원 →", "1만4000원(30%↓)"));
 //            Toast.makeText(getContext(), ""+hori_items.size(), Toast.LENGTH_SHORT).show();
 //        }
-
         load();
         rv_Update = view.findViewById(R.id.rv_update);
         horizon_adapter = new HomeFragAdapterHorizon(getActivity(), hori_items);
@@ -73,14 +72,16 @@ public class Home_Fragment extends Fragment {
         adapter = new HomeFragShopListAdapter(getActivity(), items);
         rv_Before.setAdapter(adapter);
 
-//        mySwipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
-//            @Override
-//            public void onRefresh() {
-//                load();
-//                load2();
-//                mySwipeRefreshLayout.setRefreshing(false);
-//            }
-//        });
+        //새로고침
+        mySwipeRefreshLayout = view.findViewById(R.id.swiper);
+        mySwipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+            @Override
+            public void onRefresh() {
+                load();
+                load2();
+                mySwipeRefreshLayout.setRefreshing(false);
+            }
+        });
 
     }//OnViewCreated method...
 

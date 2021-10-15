@@ -68,8 +68,7 @@ public class ShopInfoActivity extends AppCompatActivity {
         listView.setAdapter(adapter);
 
         //화면 전환효과(Animation)
-        if(Build.VERSION.SDK_INT>=Build.VERSION_CODES.LOLLIPOP)
-            iv.setTransitionName("img");
+        iv.setTransitionName("img");
 
 
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {

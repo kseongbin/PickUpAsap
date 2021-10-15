@@ -92,12 +92,9 @@ public class HomeFragAdapterHorizon extends RecyclerView.Adapter {
                     String menujson = gson.toJson(item.menu);
                     intent.putExtra("menu", menujson);
 
-                    if (Build.VERSION.SDK_INT>= Build.VERSION_CODES.LOLLIPOP){
-                        ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation((Activity)context, new Pair<View, String>(horiiv, "img"));
-                        context.startActivity(intent, options.toBundle());
-                    }else {
-                        context.startActivity(intent);
-                    }
+                    ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation((Activity)context, new Pair<View, String>(horiiv, "img"));
+                    context.startActivity(intent, options.toBundle());
+
                 }
             });
         }

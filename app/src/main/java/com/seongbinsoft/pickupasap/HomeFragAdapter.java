@@ -77,12 +77,8 @@ public class HomeFragAdapter extends RecyclerView.Adapter {
                     Gson gson = new Gson();
                     String menujson = gson.toJson(item.menu);
                     intent.putExtra("menu", menujson);
-                    if (Build.VERSION.SDK_INT>= Build.VERSION_CODES.LOLLIPOP){
-                        ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation((Activity)context, new Pair<View, String>(iv, "img"));
-                        context.startActivity(intent, options.toBundle());
-                    }else {
-                        context.startActivity(intent);
-                    }
+                    ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation((Activity)context, new Pair<View, String>(iv, "img"));
+                    context.startActivity(intent, options.toBundle());
                 }
             });
         }
