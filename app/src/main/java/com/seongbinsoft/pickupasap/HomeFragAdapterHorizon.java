@@ -89,6 +89,7 @@ public class HomeFragAdapterHorizon extends RecyclerView.Adapter {
                     intent.putExtra("img", item.horiimg);
                     intent.putExtra("latitude", item.latitude);
                     intent.putExtra("longitude", item.longitude);
+                    intent.putExtra("topic", item.topic);
 
                     Gson gson = new Gson();
                     String menujson = gson.toJson(item.menu);

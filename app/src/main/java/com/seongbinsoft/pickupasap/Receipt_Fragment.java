@@ -91,6 +91,7 @@ public class Receipt_Fragment extends Fragment {
                 intent.putExtra("img", item.img);
                 intent.putExtra("latitude", item.latitude);
                 intent.putExtra("longitude", item.longitude);
+                intent.putExtra("topic", item.topic);
                 Gson gson = new Gson();
                 String menujson = gson.toJson(item.menu);
                 intent.putExtra("menu", menujson);

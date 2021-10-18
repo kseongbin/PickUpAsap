@@ -100,11 +100,13 @@ public class ShopInfoActivity extends AppCompatActivity {
     }
 
     public void clickFav(View view) {
+        Intent intent = getIntent();
+        String topic = intent.getStringExtra("topic");
         ImageView fav = findViewById(R.id.iv_fav);
         if (i == false){
             fav.setImageResource(R.drawable.ic_baseline_favorite_24);
             i = true;
-            FirebaseMessaging.getInstance().subscribeToTopic("haengdang").addOnCompleteListener(new OnCompleteListener<Void>() {
+            FirebaseMessaging.getInstance().subscribeToTopic(topic).addOnCompleteListener(new OnCompleteListener<Void>() {
                 @Override
                 public void onComplete(@NonNull @NotNull Task<Void> task) {
                     Toast.makeText(ShopInfoActivity.this, "음식점의 업데이트를 알림으로 받습니다.", Toast.LENGTH_SHORT).show();
