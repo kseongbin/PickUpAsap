@@ -9,18 +9,22 @@ public class HomeFragHorizon_Item {
     public String one;
     public String horireal;
     public String horidc;
+    public String latitude;
+    public String longitude;
     public ArrayList<MenuList_Item> menu;
 
     public HomeFragHorizon_Item() {
     }
 
-    public HomeFragHorizon_Item(String horiimg, String horiname, String horimenu, String one, String horireal, String horidc, ArrayList<MenuList_Item> menu) {
+    public HomeFragHorizon_Item(String horiimg, String horiname, String horimenu, String one, String horireal, String horidc, String latitude, String longitude, ArrayList<MenuList_Item> menu) {
         this.horiimg = horiimg;
         this.horiname = horiname;
         this.horimenu = horimenu;
         this.one = one;
         this.horireal = horireal;
         this.horidc = horidc;
+        this.latitude = latitude;
+        this.longitude = longitude;
         this.menu = menu;
     }
 }

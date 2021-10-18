@@ -74,6 +74,8 @@ public class HomeFragAdapter extends RecyclerView.Adapter {
                     Intent intent = new Intent(context, ShopInfoActivity.class);
                     intent.putExtra("name", item.name);
                     intent.putExtra("img", item.img);
+                    intent.putExtra("latitude", item.latitude);
+                    intent.putExtra("longitude", item.longitude);
                     Gson gson = new Gson();
                     String menujson = gson.toJson(item.menu);
                     intent.putExtra("menu", menujson);

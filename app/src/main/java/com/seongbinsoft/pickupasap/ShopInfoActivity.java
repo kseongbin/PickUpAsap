@@ -90,8 +90,13 @@ public class ShopInfoActivity extends AppCompatActivity {
     }
 
     public void clickMap(View view) {
-        Intent intent = new Intent(this, GoogleMapActivity.class);
-        startActivity(intent);
+        Intent intent = getIntent();
+        String latitude = intent.getStringExtra("latitude");
+        String longitude = intent.getStringExtra("longitude");
+        Intent intent1 = new Intent(this, GoogleMapActivity.class);
+        intent1.putExtra("latitude", latitude);
+        intent1.putExtra("longitude", longitude);
+        startActivity(intent1);
     }
 
     public void clickFav(View view) {
@@ -111,4 +116,4 @@ public class ShopInfoActivity extends AppCompatActivity {
             Toast.makeText(this, "음식점의 업데이트 알림을 종료합니다.", Toast.LENGTH_SHORT).show();
         }
     }//clickFav method..
-}
+}//ShopInfoActivity class...

@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentManager;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
@@ -23,12 +24,21 @@ public class GoogleMapActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_google_map);
 
+        //double a=37.5593;   //latitude
+        //double b=127.0235;  //longitude
+
+        Intent intent = getIntent();
+        String latitude = intent.getStringExtra("latitude");
+        String longitude = intent.getStringExtra("longitude");
+        double a = Double.parseDouble(latitude);
+        double b = Double.parseDouble(longitude);
+
         FragmentManager fragmentManager = getSupportFragmentManager();
         SupportMapFragment mapFragment = (SupportMapFragment) fragmentManager.findFragmentById(R.id.frag_map);
         mapFragment.getMapAsync(new OnMapReadyCallback() {
             @Override
             public void onMapReady(@NonNull @NotNull GoogleMap googleMap) {
-                LatLng kukdong = new LatLng(37.5593, 127.0235);
+                LatLng kukdong = new LatLng(a, b);
                 googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(kukdong, 17));
                 MarkerOptions marker = new MarkerOptions();
                 marker.position(kukdong);
