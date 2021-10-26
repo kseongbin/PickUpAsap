@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.MenuItem;
@@ -112,6 +113,9 @@ public class ShopInfoActivity extends AppCompatActivity {
                     Toast.makeText(ShopInfoActivity.this, "음식점의 업데이트를 알림으로 받습니다.", Toast.LENGTH_SHORT).show();
                 }//onComplete method...
             });//FirebaseMessaging method..
+            SharedPreferences pref = getSharedPreferences("Data", MODE_PRIVATE);
+            SharedPreferences.Editor editor = pref.edit();
+            editor.commit();
         }else {
             fav.setImageResource(R.drawable.ic_baseline_favorite_border_24);
             i = false;
