@@ -34,8 +34,6 @@
                 android:id="@+id/civ01"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
-                app:civ_border_color="#D1D0D3"
-                app:civ_circle_background_color="#D1D0D3"
                 android:src="@mipmap/ic_hansik3"
                 android:layout_marginLeft="16dp"/>
 
@@ -50,9 +48,6 @@
             <de.hdodenhof.circleimageview.CircleImageView
                 android:layout_width="40dp"
                 android:layout_height="40dp"
-                app:civ_border_width="2dp"
-                app:civ_border_color="#D1D0D3"
-                app:civ_circle_background_color="#D1D0D3"
                 android:src="@mipmap/ic_chicken"
                 android:layout_marginTop="16dp"
                 android:layout_marginLeft="16dp"/>
@@ -68,9 +63,6 @@
             <de.hdodenhof.circleimageview.CircleImageView
                 android:layout_width="40dp"
                 android:layout_height="40dp"
-                app:civ_border_width="2dp"
-                app:civ_border_color="#D1D0D3"
-                app:civ_circle_background_color="#D1D0D3"
                 android:src="@mipmap/ic_dosirak"
                 android:layout_marginTop="16dp"
                 android:layout_marginLeft="16dp"/>
@@ -94,8 +86,6 @@
                 android:id="@+id/civ02"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
-                app:civ_border_width="2dp"
-                app:civ_border_color="@color/white"
                 android:src="@mipmap/ic_joonsik2"
                 android:layout_marginLeft="32dp"/>
 
@@ -110,9 +100,6 @@
             <de.hdodenhof.circleimageview.CircleImageView
                 android:layout_width="40dp"
                 android:layout_height="40dp"
-                app:civ_border_width="2dp"
-                app:civ_border_color="#D1D0D3"
-                app:civ_circle_background_color="#D1D0D3"
                 android:src="@mipmap/ic_pizza"
                 android:layout_marginTop="16dp"
                 android:layout_marginLeft="32dp"/>
@@ -128,9 +115,6 @@
             <de.hdodenhof.circleimageview.CircleImageView
                 android:layout_width="40dp"
                 android:layout_height="40dp"
-                app:civ_border_width="2dp"
-                app:civ_border_color="#D1D0D3"
-                app:civ_circle_background_color="#D1D0D3"
                 android:src="@mipmap/ic_ddokboki"
                 android:layout_marginTop="16dp"
                 android:layout_marginLeft="32dp"/>
@@ -154,9 +138,6 @@
                 android:id="@+id/civ03"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
-                app:civ_border_width="2dp"
-                app:civ_border_color="@color/white"
-                app:civ_circle_background_color="#D1D0D3"
                 android:src="@mipmap/ic_illsik2"
                 android:layout_marginLeft="32dp"/>
 
@@ -171,9 +152,6 @@
             <de.hdodenhof.circleimageview.CircleImageView
                 android:layout_width="40dp"
                 android:layout_height="40dp"
-                app:civ_border_width="2dp"
-                app:civ_border_color="#D1D0D3"
-                app:civ_circle_background_color="#D1D0D3"
                 android:src="@mipmap/ic_hamberger"
                 android:layout_marginTop="16dp"
                 android:layout_marginLeft="32dp"/>
@@ -189,9 +167,6 @@
             <de.hdodenhof.circleimageview.CircleImageView
                 android:layout_width="40dp"
                 android:layout_height="40dp"
-                app:civ_border_width="2dp"
-                app:civ_border_color="#D1D0D3"
-                app:civ_circle_background_color="#D1D0D3"
                 android:src="@mipmap/ic_ssalguksu"
                 android:layout_marginTop="16dp"
                 android:layout_marginLeft="32dp"/>
@@ -214,9 +189,6 @@
             <de.hdodenhof.circleimageview.CircleImageView
                 android:layout_width="40dp"
                 android:layout_height="40dp"
-                app:civ_border_width="2dp"
-                app:civ_border_color="@color/white"
-                app:civ_circle_background_color="@color/white"
                 android:src="@mipmap/ic_desert"
                 android:layout_marginLeft="32dp"/>
 
@@ -231,9 +203,6 @@
             <de.hdodenhof.circleimageview.CircleImageView
                 android:layout_width="40dp"
                 android:layout_height="40dp"
-                app:civ_border_width="2dp"
-                app:civ_border_color="#D1D0D3"
-                app:civ_circle_background_color="#D1D0D3"
                 android:src="@mipmap/ic_jokbal"
                 android:layout_marginTop="16dp"
                 android:layout_marginLeft="32dp"/>
