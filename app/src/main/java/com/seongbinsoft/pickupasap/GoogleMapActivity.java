@@ -44,7 +44,7 @@ public class GoogleMapActivity extends AppCompatActivity {
                 marker.position(kukdong);
                 //marker.title("극동아파트");
                 //marker.snippet("개발자의 집입니다.");
-                marker.icon(BitmapDescriptorFactory.fromResource(R.drawable.ic_flag_36));
+                //marker.icon(BitmapDescriptorFactory.fromResource(R.drawable.ic_flag_36));
                 googleMap.addMarker(marker);
             }
         });
