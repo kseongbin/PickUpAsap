@@ -43,7 +43,7 @@
             android:layout_centerHorizontal="true"
             android:layout_marginTop="8dp"
             ads:adSize="BANNER"
-            ads:adUnitId="ca-app-pub-3940256099942544/6300978111"/>
+            ads:adUnitId="ca-app-pub-5295714562603814/8644761958"/>
 
         <ListView
             android:id="@+id/receipt_listview"
