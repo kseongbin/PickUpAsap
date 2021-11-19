@@ -56,6 +56,7 @@ public class Login_Fragment extends Fragment {
                 //Toast.makeText(getContext(), "이니셜 완료!", Toast.LENGTH_SHORT).show();
             }
         });
+        //
         adView = view.findViewById(R.id.adv);
         AdRequest adRequest = new AdRequest.Builder().build();
         adView.loadAd(adRequest);
